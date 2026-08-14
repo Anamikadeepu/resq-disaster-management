@@ -1,0 +1,346 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* ==============================
+   MAIN APP
+============================== */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* ==============================
+   MAIN CARD
+============================== */
+
+.welcome-card {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  background: transparent;
+}
+
+/* ==============================
+   LOGO
+============================== */
+
+.full-screen-image {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 0;
+}
+
+/* ==============================
+   HEADINGS
+============================== */
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.setup-section h3 {
+  margin-bottom: 15px;
+}
+
+/* ==============================
+   INTRO
+============================== */
+
+.intro-text {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.primary-button,
+.setup-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: 0.2s ease;
+}
+
+.primary-button {
+  background: #d62828;
+  color: white;
+}
+
+.primary-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.setup-button {
+  background: #f1f3f6;
+  color: #222;
+}
+
+.setup-button:hover {
+  background: #e7e9ed;
+}
+
+.setup-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==============================
+   LOCATION
+============================== */
+
+.location-message {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.location-box {
+  margin-top: 15px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f1f7f3;
+  text-align: left;
+  border: 1px solid #dceee2;
+}
+
+.location-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.location-name {
+  font-size: 16px;
+  color: #333;
+}
+
+/* ==============================
+   SOS SUCCESS MESSAGE
+============================== */
+
+.success-message {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #eaf7ee;
+  color: #207a3c;
+  font-size: 14px;
+}
+
+/* ==============================
+   SOS SECTION
+============================== */
+
+.sos-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.sos-section h3 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.sos-description {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* ==============================
+   CONTACT CARD
+============================== */
+
+.contact-card {
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #f7f8fa;
+  border-radius: 12px;
+  border: 1px solid #eeeeee;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.contact-card h4 {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ==============================
+   CONTACT INPUTS
+============================== */
+
+.contact-card input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+}
+
+.contact-card input:focus {
+  border-color: #d62828;
+  box-shadow: 0 0 0 2px rgba(214, 40, 40, 0.08);
+}
+
+/* ==============================
+   REMOVE CONTACT
+============================== */
+
+.remove-button {
+  border: none;
+  background: transparent;
+  color: #d62828;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 4px;
+}
+
+.remove-button:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   ADD CONTACT
+============================== */
+
+.add-contact-button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px dashed #d62828;
+  border-radius: 10px;
+  background: white;
+  color: #d62828;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.add-contact-button:hover {
+  background: #fff5f5;
+}
+
+/* ==============================
+   CANCEL
+============================== */
+
+.cancel-button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #eeeeee;
+  color: #333;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.cancel-button:hover {
+  background: #e2e2e2;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer-text {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #999;
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 15px;
+  }
+
+  .welcome-card {
+    padding: 30px 20px;
+    border-radius: 18px;
+  }
+
+  .logo {
+    font-size: 50px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .contact-header {
+    align-items: flex-start;
+  }
+}
